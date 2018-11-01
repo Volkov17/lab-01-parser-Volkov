@@ -18,6 +18,8 @@ find_package(GTest CONFIG REQUIRED)
 
 # enum your files and delete this comment
 add_executable(parser_tests
+json.hpp
+json.cpp
 )
 
 target_include_directories(parser_tests PUBLIC ${CMAKE_CURRENT_SOURCE_DIR}/include)
