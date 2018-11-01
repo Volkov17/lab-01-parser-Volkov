@@ -6,7 +6,7 @@
 
 
 
-using namespace std;
+using namespace std
 //using namespace boost;
 
 Json ::Json(const string &s) {
