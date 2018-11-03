@@ -52,7 +52,7 @@ bool Json ::is_null() const {
 
 any&  Json :: operator[](const string& key){
     if (is_object()){
-        auto& map = any_cast< map<string , any>>(&_data);
+        auto& map = any_cast< map<string , any>&>(_data);
         return map[key];
     }
     else
@@ -62,7 +62,7 @@ any&  Json :: operator[](const string& key){
 any& Json ::operator[](int index){
     auto a = _data;
     if ( is_array() ) {
-        auto& vector = any_cast <vector<any>>(&a);
+        auto& vector = any_cast <vector<any>&>(a);
         return vector[index];
     }
     else
